@@ -42,7 +42,7 @@ public class EditPetServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -106,6 +106,7 @@ public class EditPetServlet extends HttpServlet {
             out.println(result);
             if (result != 0) {
                 request.setAttribute("successUpdate", "Actualización Exitosa!");
+                request.setAttribute("user", session.getAttribute("userData"));
                 RequestDispatcher req = request.getRequestDispatcher("home.jsp");
                 req.include(request, response);
             } else {
