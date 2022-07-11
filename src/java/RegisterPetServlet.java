@@ -89,6 +89,11 @@ public class RegisterPetServlet extends HttpServlet {
                     request.getRequestDispatcher("home.jsp").forward(request, response);
 
                 }
+                else{
+                    request.setAttribute("user", session.getAttribute("userData"));
+                    request.setAttribute("listPets", listaMascotas);
+                    request.getRequestDispatcher("home.jsp").forward(request, response);
+                }
 
             } catch (SQLException | ClassNotFoundException ex) {
                 Logger.getLogger(RegisterPetServlet.class.getName()).log(Level.SEVERE, null, ex);

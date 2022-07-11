@@ -52,6 +52,8 @@ public class LogoutServlet extends HttpServlet {
         HttpSession session = request.getSession();
         session.removeAttribute("userId");
         session.removeAttribute("userData");
+        session.removeAttribute("petsId");
+
 
         RequestDispatcher req = request.getRequestDispatcher("index.jsp");
         req.include(request, response);
