@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-07-2022 a las 19:23:30
+-- Tiempo de generación: 11-07-2022 a las 19:44:55
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 7.4.27
 
@@ -45,7 +45,9 @@ CREATE TABLE `mascotas` (
 --
 
 INSERT INTO `mascotas` (`idMascota`, `idUsuario`, `nombre`, `raza`, `especie`, `color`, `genero`, `peso`, `edad`, `diagnostico`) VALUES
-(2, 3, 'Lupe', 'beagle', 'perro', 'cafe, blanco, negro', 'Hembra\r\n', 15, 2, 'Lleva 3 dias con fiebre, sin comer, ojos opacos.\r\n');
+(2, 3, 'Lupe', 'beagle', 'perro', 'cafe, blanco, negro', 'Hembra\r\n', 15, 2, 'Lleva 3 dias con fiebre, sin comer, ojos opacos.\r\n'),
+(5, 2, 'pinina', 'salchicha', 'perro', 'amarillo', 'Hembra\r\n', 8, 1, 'Problemas para caminar, mareos.\r\n'),
+(6, 2, 'luki', 'angora', 'gato', 'blanco', 'Hembra', 4, 1, 'debilidad, no come.');
 
 -- --------------------------------------------------------
 
@@ -97,7 +99,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `mascotas`
 --
 ALTER TABLE `mascotas`
-  MODIFY `idMascota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idMascota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
